@@ -1,83 +1,108 @@
 import React, { Component } from "react";
-import { Button, Image } from "semantic-ui-react";
+import { Button, Image, Icon, Grid } from "semantic-ui-react";
 import What from "./what";
 import Why from "./why";
-import Togglebutton from "./togglebutton";
-import Side from "./sidemenu";
+import PreOrder from "./preorder";
 import { Link } from "react-scroll";
+import Side from "./side";
+
 class Groodd extends Component {
   state = {};
-  handleClick = () => {};
+  handleShow = event => {};
   render() {
     return (
       <React.Fragment>
         <div className="head">
-          <div className="tg">
-            <Togglebutton />
-          </div>
-          <div className="menu">
-            <ul className="style">
-              <li className="listimg">
-                <Image src={"./image/grood-w.png"} size="tiny" />
-              </li>
-              <li className="listgrood">
-                <Link
-                  activeClass="active"
-                  to="what"
-                  spy={true}
-                  smooth={true}
-                  offset={23}
-                  duration={500}
-                >
-                  What's Grood?
-                </Link>
-              </li>
-              <li className="listmenu">
-                <Link
-                  activeClass="active"
-                  to="why"
-                  spy={true}
-                  smooth={true}
-                  offset={600}
-                  duration={500}
-                >
-                  For Better World!
-                </Link>
-              </li>
-              <li className="listbtn">
-                <Button className="insize" primary onClick={this.handleClick}>
-                  Pre-Order Now
-                </Button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="ridebike">
-          <div className="ride">
-            <div className="banner">
-              <h2 className="mybike">Ride Grood for:Bold Italic 60pt </h2>
-              <h1 className="better">Better world 100pt</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                <br />
-                sed do eiusmod tempor incididunt ut labore et dolore
-                <br />
-                magna aliqua.
-              </p>
-              <Button size="massive">Learn More</Button>
+          <div className="tol_bar">
+            <div className="logo">
+              <Image src={"./image/grood-w.png"} size="tiny" />
             </div>
-            <div className="banner">
-              <Image src={"./image/bike.png"} size="big" />
+            <div className="group_btn">
+              <Button icon onClick={this.handleShow}>
+                <Icon name="align justify" />
+              </Button>
+            </div>
+            <div className="list_menu">
+              <ul className="style">
+                <li className="menu">
+                  <Link
+                    activeClass="active"
+                    to="about_grood"
+                    spy={true}
+                    smooth={true}
+                    offset={10}
+                    duration={500}
+                  >
+                    What's Grood?
+                  </Link>
+                </li>
+                <li className="menu">
+                  <Link
+                    activeClass="active"
+                    to="grood_detail"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                  >
+                    For Better World!
+                  </Link>
+                </li>
+                <li className="list_btn">
+                  <Button
+                    activeClass="active"
+                    to="what"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                    duration={500}
+                    className="insize"
+                  >
+                    Pre-Order Now
+                  </Button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div className="what">
+        <div className="grood_bike">
+          <div className="slide">
+            <Side />
+          </div>
+          <div className="grid_grood_bike">
+            <Grid columns={2}>
+              <Grid.Column>
+                <div className="banner">
+                  <h2 className="ride_for">Ride Grood for: </h2>
+                  <h1 className="better">Better world 100pt</h1>
+                  <div className="lorem">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <Button size="massive">Learn More</Button>
+                  </div>
+                </div>
+              </Grid.Column>
+              <Grid.Column>
+                <div className="banner">
+                  <Image src={"./image/bike.png"} size="big" />
+                </div>
+              </Grid.Column>
+            </Grid>
+          </div>
+        </div>
+
+        <div className="about_grood">
           <What />
         </div>
-        <div className="why">
+        <div className="grood_detail">
           <Why />
+        </div>
+        <div className="pre_order">
+          <PreOrder />
         </div>
       </React.Fragment>
     );
