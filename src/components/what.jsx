@@ -9,7 +9,7 @@ class What extends Component {
           <h1 className="titlesize">
             What's<span className="hh2"> Grood</span>?
           </h1>
-          <p>
+          <p className="grood_title">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit, sed do
             eiusmod tempor incidicunt ut labore et{" "}
             <span className="style_paragrap">dolore magna aliqua.</span>Ut enim

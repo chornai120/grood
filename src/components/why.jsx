@@ -11,12 +11,9 @@ class Why extends Component {
               Why's <span className="style_paragrap"> Grood</span>
               <span> ?</span>
             </h1>
-            <p>
+            <p className="paragrap_title">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit, sed do
-              eiusmod tempor
-            </p>
-            <p className="paragrap">
-              incidicunt ut labore et
+              eiusmod tempor incidicunt ut labore et
               <span className="style_paragrap"> dolore magna aliqua</span>
             </p>
           </div>
@@ -24,24 +21,27 @@ class Why extends Component {
             <Grid container columns={3}>
               <Grid.Column>
                 <Image src="./image/bike-b.png" size="tiny" centered />
-                <h1 className="item">Bold </h1>
-                <p>Lorem ipsum elit adipiscing elit,</p>
-                <p className="paragrap"> incididunt ut labor lorem</p>
-                <p className="paragrap">ipsum dolor sit amet</p>
+                <h1 className="item">Bold Italic</h1>
+                <p>
+                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
+                  ipsum dolor sit amet
+                </p>
               </Grid.Column>
               <Grid.Column>
                 <Image src="./image/battery.png" size="tiny" centered />
                 <h1 className="item">ECO Friendly</h1>
-                <p>Lorem ipsum elit adipiscing elit,</p>
-                <p className="paragrap"> incididunt ut labor lorem</p>
-                <p className="paragrap">ipsum dolor sit amet</p>
+                <p>
+                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
+                  ipsum dolor sit amet
+                </p>
               </Grid.Column>
               <Grid.Column>
                 <Image src="./image/spped.png" size="tiny" centered />
                 <h1 className="item">ECO Friendly</h1>
-                <p>Lorem ipsum elit adipiscing elit,</p>
-                <p className="paragrap"> incididunt ut labor lorem</p>
-                <p className="paragrap">ipsum dolor sit amet</p>
+                <p>
+                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
+                  ipsum dolor sit amet
+                </p>
               </Grid.Column>
             </Grid>
           </div>

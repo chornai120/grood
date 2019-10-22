@@ -4,12 +4,25 @@ class PreOrder extends Component {
   constructor() {
     super();
     this.state = {
-      firstname: "",
-      lastname: "",
-      emailaddress: "",
-      phonenumber: ""
+      firstname: null,
+      lastname: null,
+      emailaddress: null,
+      phonenumber: null,
+      email: null,
+      formErrors: {
+        firstname: "",
+        lastname: "",
+        emailaddress: "",
+        phonenumber: "",
+        email: ""
+      }
     };
   }
+  handleClick = event => {
+    this.setState = {
+      firstname: {}
+    };
+  };
   handleChange = event => {
     this.setState({
       ...this.state,
@@ -19,7 +32,6 @@ class PreOrder extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
   };
 
   render() {
@@ -75,8 +87,13 @@ class PreOrder extends Component {
               id="form-textarea-control-opinion"
               control={TextArea}
               placeholder="Email Address"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
             />
-            <div class="ui primary submit button">Submit Now</div>
+            <div onClick={this.handleClick} class="ui primary submit button">
+              Submit Now
+            </div>
           </form>
         </center>
 

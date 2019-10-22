@@ -1,14 +1,24 @@
 import React, { Component } from "react";
-import { Button, Image, Icon, Grid } from "semantic-ui-react";
+import { Button, Image, Icon } from "semantic-ui-react";
+import { ScrollTo } from "react-scroll-to";
 import What from "./what";
 import Why from "./why";
 import PreOrder from "./preorder";
 import { Link } from "react-scroll";
-import Side from "./side";
-
+import Side from "./dropdown";
 class Groodd extends Component {
   state = {};
   handleShow = event => {};
+  handleClick = e => {
+    this.setState({
+      activeSection: e.target.id
+    });
+
+    window.scrollTo({
+      top: 2355,
+      behavior: "smooth"
+    });
+  };
   render() {
     return (
       <React.Fragment>
@@ -49,17 +59,11 @@ class Groodd extends Component {
                   </Link>
                 </li>
                 <li className="list_btn">
-                  <Button
-                    activeClass="active"
-                    to="what"
-                    spy={true}
-                    smooth={true}
-                    offset={-200}
-                    duration={500}
-                    className="insize"
-                  >
-                    Pre-Order Now
-                  </Button>
+                  <ScrollTo>
+                    {({ scrollTo }) => (
+                      <Button onClick={this.handleClick}>Pre-Order Now</Button>
+                    )}
+                  </ScrollTo>
                 </li>
               </ul>
             </div>
@@ -71,27 +75,25 @@ class Groodd extends Component {
             <Side />
           </div>
           <div className="grid_grood_bike">
-            <Grid columns={2}>
-              <Grid.Column>
-                <div className="banner">
-                  <h2 className="ride_for">Ride Grood for: </h2>
-                  <h1 className="better">Better world 100pt</h1>
-                  <div className="lorem">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                    <Button size="massive">Learn More</Button>
-                  </div>
+            <div className="title_grood">
+              <div className="banner">
+                <h2 className="ride_for">Ride Grood for: </h2>
+                <h1 className="better">Better world 100pt</h1>
+                <div className="lorem">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <Button size="massive">Learn More</Button>
                 </div>
-              </Grid.Column>
-              <Grid.Column>
-                <div className="banner">
-                  <Image src={"./image/bike.png"} size="big" />
-                </div>
-              </Grid.Column>
-            </Grid>
+              </div>
+            </div>
+            <div className="grood_img">
+              <div className="banner">
+                <Image src={"./image/bike.png"} size="big" />
+              </div>
+            </div>
           </div>
         </div>
 
