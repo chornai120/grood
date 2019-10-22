@@ -25,11 +25,11 @@ p {
 
 .tol_bar {
   display: flex;
-  margin-left: 18.5em;
 }
 
 .logo {
   margin-top: 11px;
+  margin-left: 15em;
 }
 
 .list_menu {
@@ -93,10 +93,18 @@ p {
   color: #fdc501;
   margin-right: -159px;
 }
+i.icon,
+i.icons {
+  font-size: 2em !important;
+  color: whitesmoke;
+  margin-top: 7px !important;
+  cursor: pointer;
+}
 .grood_img {
   margin-left: -68px;
   margin-top: 32px;
 }
+
 .ui.button {
   background-color: #fdc501 !important;
   color: black !important;
@@ -133,6 +141,7 @@ p {
   margin-bottom: 150px;
   color: black;
 }
+
 .grood_title {
   margin-left: 60px;
   margin-right: 60px;
@@ -180,7 +189,9 @@ p {
 .banner {
   margin-top: 15em;
 }
-
+.paragrap {
+  margin-top: -18px;
+}
 .title {
   text-align: center;
 }
@@ -298,7 +309,6 @@ h4 {
 }
 
 .group_btn {
-  margin-left: 70px;
   display: none;
 }
 
@@ -310,23 +320,29 @@ h4 {
   .better {
     margin-top: 125px;
   }
+
   .group_btn {
     display: block;
   }
+
   .what_about_grood {
     text-align: justify;
     margin-left: 35px;
     margin-right: 35px;
   }
+
   .ui.massive.button {
     font-size: 1rem !important;
   }
+
   .logo {
     display: none;
   }
+
   .ui.big.image {
     margin-top: 80px;
   }
+
   .list_menu {
     display: none;
   }
@@ -356,10 +372,12 @@ h4 {
   .ui.grid {
     display: block !important;
   }
+
   .image_style {
     margin-left: 20px;
     margin-right: 30px;
   }
+
   .ride_for {
     font-size: 20px;
   }
@@ -367,45 +385,56 @@ h4 {
   .better {
     font-size: 30px;
   }
+
   .paragrap_title {
-    text-align: justify;
     margin-left: 4em;
     margin-right: 4em;
   }
+
   .ui.primary.submit.button {
     font-size: 14px;
   }
+
   .ui.form.segment {
     width: 80% !important;
   }
+
   .ride {
     display: block !important;
     margin-left: 6.2em;
   }
+
   .under_footer {
     margin-top: 0;
     margin-left: 0;
   }
+
   .grood {
     margin-top: 1.9%;
   }
+
   p {
     font-size: 13px;
   }
+
   .grood_title {
     margin-left: 0;
     margin-right: 0;
   }
+
   .item {
     font-size: 24px;
   }
+
   .grood_img {
     margin-left: 20px;
     margin-top: 0x;
   }
+
   .titlesize {
     font-size: 48px;
   }
+
   .detail_about_grood {
     margin-top: 50px;
     margin-left: 0;

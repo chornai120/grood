@@ -22,26 +22,23 @@ class Why extends Component {
               <Grid.Column>
                 <Image src="./image/bike-b.png" size="tiny" centered />
                 <h1 className="item">Bold Italic</h1>
-                <p>
-                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
-                  ipsum dolor sit amet
-                </p>
+                <p>Lorem ipsum elit adipiscing elit,</p>
+                <p className="paragrap">incididunt ut labor lorem</p>
+                <p className="paragrap"> ipsum dolor sit amet</p>
               </Grid.Column>
               <Grid.Column>
                 <Image src="./image/battery.png" size="tiny" centered />
                 <h1 className="item">ECO Friendly</h1>
-                <p>
-                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
-                  ipsum dolor sit amet
-                </p>
+                <p>Lorem ipsum elit adipiscing elit,</p>
+                <p className="paragrap">incididunt ut labor lorem</p>
+                <p className="paragrap"> ipsum dolor sit amet</p>
               </Grid.Column>
               <Grid.Column>
                 <Image src="./image/spped.png" size="tiny" centered />
                 <h1 className="item">ECO Friendly</h1>
-                <p>
-                  Lorem ipsum elit adipiscing elit, incididunt ut labor lorem
-                  ipsum dolor sit amet
-                </p>
+                <p>Lorem ipsum elit adipiscing elit,</p>
+                <p className="paragrap">incididunt ut labor lorem</p>
+                <p className="paragrap"> ipsum dolor sit amet</p>
               </Grid.Column>
             </Grid>
           </div>

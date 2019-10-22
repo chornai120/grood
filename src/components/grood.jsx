@@ -5,10 +5,14 @@ import What from "./what";
 import Why from "./why";
 import PreOrder from "./preorder";
 import { Link } from "react-scroll";
-import Side from "./dropdown";
-class Groodd extends Component {
-  state = {};
-  handleShow = event => {};
+import Side from "./clickmenu";
+class Grood extends Component {
+  state = {
+    myShow: false
+  };
+  handleMenu = e => {
+    this.setState({ myShow: true });
+  };
   handleClick = e => {
     this.setState({
       activeSection: e.target.id
@@ -24,14 +28,14 @@ class Groodd extends Component {
       <React.Fragment>
         <div className="head">
           <div className="tol_bar">
+            <div className="group_btn">
+              <Icon onClick={this.handleMenu} name="align justify" />
+              {this.state.myShow ? <Side /> : null}
+            </div>
             <div className="logo">
               <Image src={"./image/grood-w.png"} size="tiny" />
             </div>
-            <div className="group_btn">
-              <Button icon onClick={this.handleShow}>
-                <Icon name="align justify" />
-              </Button>
-            </div>
+
             <div className="list_menu">
               <ul className="style">
                 <li className="menu">
@@ -69,11 +73,10 @@ class Groodd extends Component {
             </div>
           </div>
         </div>
-
+        <div className="slide">
+          <Side />
+        </div>
         <div className="grood_bike">
-          <div className="slide">
-            <Side />
-          </div>
           <div className="grid_grood_bike">
             <div className="title_grood">
               <div className="banner">
@@ -111,4 +114,4 @@ class Groodd extends Component {
   }
 }
 
-export default Groodd;
+export default Grood;
